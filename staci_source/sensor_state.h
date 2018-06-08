@@ -1,16 +1,14 @@
 #ifndef _SENSOR_STATE_H    /* Guard against multiple inclusion */
 #define _SENSOR_STATE_H
 
+
 /* Provide C++ Compatibility */
 #ifdef __cplusplus
 extern "C" {
 #endif
-    
-    /*
-        @param readingNum, curSensorVal, curSum
-        @return sum of sensor values
-     */
-    double SensorOutputState(int readingNum, double curSensorVal, double curSum);
+
+
+   unsigned int avgStateMachine(unsigned int sumOfReadings, unsigned int curReading, unsigned int stateNum);
 
 
     /* Provide C++ Compatibility */

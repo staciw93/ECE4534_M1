@@ -3,22 +3,23 @@
 
 #include "FreeRTOS.h"
 #include "queue.h"
-
+#include "debug.h"
 
 /* Provide C++ Compatibility */
 #ifdef __cplusplus
 extern "C" {
 #endif
-    
+
+
 #define MSGQUEUE_LENGTH                   10
-#define MSGTYPE                           uint8_t
-#define MSG_GENERIC                       0x00
+#define MSGTYPE                           unsigned int
 
 QueueHandle_t appQueue;
     
     void createQueue();
     void readFromQueue(void* msg);
     void writeToQueue(void* msg);
+
 
 
     /* Provide C++ Compatibility */
